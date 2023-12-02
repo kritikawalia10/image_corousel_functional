@@ -8,28 +8,27 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 // complete the function below:
 function Carousel() {
-    const [newImage, setnewImage] = useState(0);
-    const { img, title, subtitle } = images[newImage];
-  
-    const updateImage = (newIndex) => setnewImage(Math.max(0, Math.min(newIndex, images.length - 1)));
-  
-    return (
-      <div className="carousel">
-        <div className="carouselInner" style={{ backgroundImage: `url(${img})` }}>
-          <div className="left" onClick={() => updateImage(newImage - 1)}>
-            <ArrowBackIosIcon style={{ fontSize: 30 }} />
-          </div>
-          <div className="center">
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
-          </div>
-          <div className="right" onClick={() => updateImage(newImage + 1)}>
-            <ArrowForwardIosIcon style={{ fontSize: 30 }} />
-          </div>
+  const [newImage, setnewImage] = useState(0);
+  const { img, title, subtitle } = images[newImage];
+
+  const changeImage = (newValue) => setnewImage(Math.max(0, Math.min(newValue, images.length - 1)));
+
+  return (
+    <div className="container">
+      <div className="image" style={{ backgroundImage: `url(${img})` }}>
+        <div className="start" onClick={() => changeImage(newImage - 1)}>
+          <ArrowBackIosIcon style={{ fontSize: 50 }} />
+        </div>
+        <div className="input">
+          <h1>{title}</h1>
+          <p>{subtitle}</p>
+        </div>
+        <div className="end" onClick={() => changeImage(newImage + 1)}>
+          <ArrowForwardIosIcon style={{ fontSize: 50 }} />
         </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
 
 export default Carousel;

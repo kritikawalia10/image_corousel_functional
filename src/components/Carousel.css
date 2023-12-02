@@ -1,28 +1,40 @@
 /* write down the css for Carousel in this file */
-.carousel {
-    width: 55%;
-    height: 690px;
-    background-color: rgba(0, 0, 0, 0.621);
+h1 {
+    font-size: 60px;
+    background-color: rgba(55, 53, 53, 0.801);
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 8px;
 }
-.carouselInner {
+.image {
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     height: 100%;
+    background-repeat: no-repeat;
     width: 100%;
 }
-.carouselInner .left {
+.start {
     display: grid;
-    flex: 5%;
     height: 100%;
-    background-color: black;
+    background-color: rgb(118, 115, 115);
     place-items: center; 
-    color: white;
-    cursor: pointer;
+    color: rgb(55, 53, 53);
+}
+p {
+    font-size: 20px;
+    background-color: rgba(55, 53, 53, 0.801);
+    padding: 10px;
+    border-radius: 8px;
+    color: aliceblue;
 }
 
-.carouselInner .center {
+.container {
+    width: 50%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.621);
+}
+.input{
     flex: 80%;
     height: 100%;
     display: grid;
@@ -30,26 +42,11 @@
     text-align: justify;
     text-align-last: center;
 }
-.carouselInner .right {
-    flex: 5%;
+.end {
     display: grid;
     place-items: center;
     height: 100%;
-    background-color:black;
-    color: white;
-    cursor: pointer;
+    background-color:rgb(118, 115, 115);
+    color: rgb(55, 53, 53);
 }
 
-h1 {
-    font-size: 90px;
-    background-color: rgba(255, 255, 255, 0.659);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-p {
-    font-size: 40px;
-    background-color: rgba(255, 255, 255, 0.659);
-    padding: 15px;
-    border-radius: 10px;
-}
